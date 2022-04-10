@@ -7,6 +7,7 @@ public class BossMovement : MonoBehaviour
     private float risingSpeed = 5f;
     private bool isRising = true;
     private float risingStopTimer = 2f;
+    public float what;
     // Start is called before the first frame update
     void Start()
     {
