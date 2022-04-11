@@ -21,7 +21,6 @@ public class FloatingText : MonoBehaviour
             Random.Range(-randomTextPosition.y, randomTextPosition.y),
             Random.Range(-randomTextPosition.z, randomTextPosition.z));
 
-        transform.LookAt(transform.position + myCamera.transform.rotation * Vector3.back, myCamera.transform.rotation * Vector3.up);
     }
 
     // Update is called once per frame

@@ -7,7 +7,9 @@ using TMPro;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public GameObject floatingTextPrefab;
+   // public TextMeshProUGUI enemyFloatingText;
+    public Image backhealthbar;
+    public Image healthBar;
     public Animator anim;
     //
     public int enemyGetHit;
@@ -51,15 +53,16 @@ public class EnemyHealth : MonoBehaviour
             enemyGetHit = Random.Range(10, 20);
             currentHealth -= enemyGetHit;
             Destroy(other.gameObject);
+            healthBar.fillAmount -= enemyGetHit / 100f;
+          //  enemyFloatingText.text = currentHealth.ToString();
 
             if (currentHealth > 0)
             {
-                FloatingText();
+                Invoke("EnemyTextRest", 2f);
             }
             
-            if (currentHealth < 0 && !monsterDeath)
+            if (currentHealth <= 0 && !monsterDeath)
             {
-
                 monsterDeath = true;
                 anim.SetTrigger("MonsterDead");
                 nav.enabled = false;
@@ -70,15 +73,16 @@ public class EnemyHealth : MonoBehaviour
 
                 Instantiate(dropLootSpawn, transform.position, Quaternion.identity);
 
-                Invoke("StartSinking", 2f);               
+                Invoke("StartSinking", 2f);
+                Destroy(healthBar);
+                Destroy(backhealthbar);
             }
         }
     }
-    void FloatingText()
+    /*void EnemyTextRest()
     {
-        var go = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity, transform);
-        go.GetComponent<TextMeshPro>().text = currentHealth.ToString();
-    }
+        enemyFloatingText.text = "";
+    }*/
     void StartSinking()
     {
         isSinking = true; 

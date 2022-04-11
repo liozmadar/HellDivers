@@ -14,6 +14,6 @@ public class CanvasHealth : MonoBehaviour
     void Update()
     {
         transform.LookAt(Camera.main.transform);
-       // transform.Rotate(0, 180, 0);
+        transform.Rotate(0, 180, 0);
     }
 }
