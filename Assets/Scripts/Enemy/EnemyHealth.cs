@@ -7,7 +7,7 @@ using TMPro;
 
 public class EnemyHealth : MonoBehaviour
 {
-   // public TextMeshProUGUI enemyFloatingText;
+    public GameObject enemyCanvas;
     public Image backhealthbar;
     public Image healthBar;
     public Animator anim;
@@ -34,13 +34,12 @@ public class EnemyHealth : MonoBehaviour
         nav = GetComponent<NavMeshAgent>();
         enemyMove = GetComponent<EnemyMovment>();
         enemyDmg = GetComponent<EnemyDmg>();
-        rb = GetComponent<Rigidbody>();   
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
-    {
-        
+    {     
         if (isSinking)
         {
             transform.Translate(-Vector3.up * sinkSpeed * Time.deltaTime);
@@ -50,15 +49,19 @@ public class EnemyHealth : MonoBehaviour
     {
         if (other.gameObject.tag == "Bullet" || other.gameObject.tag == "BulletMissile")
         {
+            if (!monsterDeath)
+            {
+                enemyCanvas.SetActive(true);
+            }
+               
             enemyGetHit = Random.Range(10, 20);
             currentHealth -= enemyGetHit;
             Destroy(other.gameObject);
             healthBar.fillAmount -= enemyGetHit / 100f;
-          //  enemyFloatingText.text = currentHealth.ToString();
 
             if (currentHealth > 0)
             {
-                Invoke("EnemyTextRest", 2f);
+                Invoke("HideHealth", 3f);
             }
             
             if (currentHealth <= 0 && !monsterDeath)
@@ -74,15 +77,17 @@ public class EnemyHealth : MonoBehaviour
                 Instantiate(dropLootSpawn, transform.position, Quaternion.identity);
 
                 Invoke("StartSinking", 2f);
-                Destroy(healthBar);
-                Destroy(backhealthbar);
+                Destroy(enemyCanvas);
             }
         }
     }
-    /*void EnemyTextRest()
+    void HideHealth()
     {
-        enemyFloatingText.text = "";
-    }*/
+        if (!monsterDeath)
+        {
+            enemyCanvas.SetActive(false);
+        }     
+    }
     void StartSinking()
     {
         isSinking = true; 
