@@ -13,7 +13,9 @@ public class CanvasHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(Camera.main.transform);
+       /* transform.LookAt(Camera.main.transform);
         transform.Rotate(0, 180, 0);
+*/
+        transform.eulerAngles = Camera.main.transform.eulerAngles;
     }
 }
