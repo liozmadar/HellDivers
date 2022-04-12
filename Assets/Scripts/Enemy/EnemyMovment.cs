@@ -20,6 +20,7 @@ public class EnemyMovment : MonoBehaviour
     {
         nav.SetDestination(lookAtPlayer.position);
 
-        float Distance = Vector3.Distance(lookAtPlayer.transform.position, gameObject.transform.position);            
+        float Distance = Vector3.Distance(lookAtPlayer.transform.position, gameObject.transform.position);
+        
     }
 }

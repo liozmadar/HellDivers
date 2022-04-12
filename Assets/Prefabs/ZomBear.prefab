@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 5112217847122681805}
   m_Layer: 0
   m_Name: ZomBear
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,10 +86,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!136 &5112217847122681793
 CapsuleCollider:
@@ -133,7 +133,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   player: {fileID: 0}
   playerHealth: {fileID: 0}
-  Damage: 10
+  Damage: 1
   timeBetweenAttacks: 0.5
 --- !u!114 &5112217847122681806
 MonoBehaviour:
@@ -148,8 +148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCanvas: {fileID: 5112217846363893421}
-  backhealthbar: {fileID: 0}
-  healthBar: {fileID: 0}
+  backhealthbar: {fileID: 5112217846350203411}
+  healthBar: {fileID: 5112217847234142860}
   anim: {fileID: 0}
   enemyGetHit: 0
   startHealth: 100
