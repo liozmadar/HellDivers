@@ -6,6 +6,7 @@ public class CallTheSpaceShip : MonoBehaviour
 {
     public GameObject spaceShip;
     private bool oneCallForTheSpaceShip = true;
+    private Vector3 currentPosition;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +23,18 @@ public class CallTheSpaceShip : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.K) && oneCallForTheSpaceShip)
         {
-            spaceShip.transform.position = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
+            currentPosition = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
+            Debug.Log(currentPosition);
+
+          
             oneCallForTheSpaceShip = false;
-        }
-       
+
+            Invoke("Check", 3);
+        }      
+    }
+    void Check()
+    {
+        Debug.Log(currentPosition);
+        spaceShip.transform.position = currentPosition;
     }
 }
