@@ -10551,7 +10551,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f4a820d63f1b4949a9793fe454433a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spaceShip: {fileID: 1082419764570701}
   player: {fileID: 8296172669051487024}
+  shipSphereTimer: 10
 --- !u!224 &1857099031 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
