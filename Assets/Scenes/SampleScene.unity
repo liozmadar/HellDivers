@@ -12029,6 +12029,10 @@ PrefabInstance:
       value: SpaceShip
       objectReference: {fileID: 0}
     - target: {fileID: 6775246869513965890, guid: cdf3abdc6aff505468011ff8679607fb, type: 3}
+      propertyPath: m_Drag
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775246869513965890, guid: cdf3abdc6aff505468011ff8679607fb, type: 3}
       propertyPath: m_Mass
       value: 1
       objectReference: {fileID: 0}
