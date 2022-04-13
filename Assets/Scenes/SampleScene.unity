@@ -10554,6 +10554,7 @@ MonoBehaviour:
   spaceShip: {fileID: 1082419764570701}
   player: {fileID: 8296172669051487024}
   shipSphereTimer: 10
+  spaceShipIsCalled: 1
 --- !u!224 &1857099031 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
@@ -12129,7 +12130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7573006682613376096, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7573006682613376098, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
       propertyPath: enemyPrefab
@@ -12233,3 +12234,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spaceShip: {fileID: 1082419764570701}
+  sphere: {fileID: 1848025885}
