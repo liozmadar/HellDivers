@@ -6,10 +6,13 @@ public class TakeThePlayerUp : MonoBehaviour
 {
     public GameObject spaceShip;
     public GameObject player;
+    public TrailRenderer trailRenderer;
+
     private float shipSphereTimer = 5f;
+    public float upSpeed = 1;
 
     public bool spaceShipIsCalled = true;
-    public TrailRenderer trailRenderer;
+    public bool endGameGoUp = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,15 +23,17 @@ public class TakeThePlayerUp : MonoBehaviour
     void Update()
     {
         ShipSphereTimer();
-
-
     }
     private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            player.transform.position = transform.position;
-            Debug.Log("111");
+            if (endGameGoUp)
+            {
+                player.transform.position = transform.position;
+
+                transform.Translate(Vector3.up * upSpeed * Time.deltaTime);
+            }    
         }
     }
     void ShipSphereTimer()

@@ -39,6 +39,7 @@ public class CallTheSpaceShip : MonoBehaviour
         spaceShip.transform.position = currentPosition;
 
         sphere.spaceShipIsCalled = false;
+        sphere.endGameGoUp = true;
         trailRendererFromTheShipSphere.enabled = true;
     }
 }

@@ -10555,6 +10555,7 @@ MonoBehaviour:
   player: {fileID: 8296172669051487024}
   spaceShipIsCalled: 1
   trailRenderer: {fileID: 1848025887}
+  upSpeed: 15
 --- !u!96 &1848025887 stripped
 TrailRenderer:
   m_CorrespondingSourceObject: {fileID: 6775246869513965949, guid: cdf3abdc6aff505468011ff8679607fb, type: 3}
