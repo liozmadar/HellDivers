@@ -10553,8 +10553,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spaceShip: {fileID: 1082419764570701}
   player: {fileID: 8296172669051487024}
-  shipSphereTimer: 10
   spaceShipIsCalled: 1
+  trailRenderer: {fileID: 1848025887}
+--- !u!96 &1848025887 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 6775246869513965949, guid: cdf3abdc6aff505468011ff8679607fb, type: 3}
+  m_PrefabInstance: {fileID: 6775246871021728351}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1857099031 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
@@ -12023,6 +12028,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceShip
       objectReference: {fileID: 0}
+    - target: {fileID: 6775246869513965890, guid: cdf3abdc6aff505468011ff8679607fb, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6775753881300963758, guid: cdf3abdc6aff505468011ff8679607fb, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -12235,3 +12244,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spaceShip: {fileID: 1082419764570701}
   sphere: {fileID: 1848025885}
+  trailRendererFromTheShipSphere: {fileID: 1848025887}
