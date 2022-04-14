@@ -14,6 +14,7 @@ public class CallTheSpaceShip : MonoBehaviour
     public TrailRenderer trailRendererFromTheShipSphere;
 
     public Button spaceShipButton;
+    public bool tookTheSample;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,7 @@ public class CallTheSpaceShip : MonoBehaviour
 
     public void SummonTheSpaceShip()
     {
-        if (oneCallForTheSpaceShip)
+        if (oneCallForTheSpaceShip && tookTheSample)
         {
             currentPosition = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
             Debug.Log(currentPosition);

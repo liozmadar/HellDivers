@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class SampleDestroyOnTouch : MonoBehaviour
 {
+    public CallTheSpaceShip callTheSpaceShip ;
     // Start is called before the first frame update
     void Start()
     {
-        
+        callTheSpaceShip = FindObjectOfType<CallTheSpaceShip>();
     }
 
     // Update is called once per frame
@@ -20,6 +21,7 @@ public class SampleDestroyOnTouch : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Destroy(gameObject);
+            callTheSpaceShip.tookTheSample = true;
         }
     }
 }
