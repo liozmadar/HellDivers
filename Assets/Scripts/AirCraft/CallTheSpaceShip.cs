@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CallTheSpaceShip : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class CallTheSpaceShip : MonoBehaviour
     public TakeThePlayerUp sphere;
     public SpaceShip ship;
     public TrailRenderer trailRendererFromTheShipSphere;
+
+    public Button spaceShipButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,12 +23,12 @@ public class CallTheSpaceShip : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        SummonTheSpaceShip();      
+             
     }
 
-    void SummonTheSpaceShip()
+    public void SummonTheSpaceShip()
     {
-        if (Input.GetKey(KeyCode.K) && oneCallForTheSpaceShip)
+        if (oneCallForTheSpaceShip)
         {
             currentPosition = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
             Debug.Log(currentPosition);
