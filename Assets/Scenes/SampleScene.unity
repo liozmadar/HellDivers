@@ -10557,6 +10557,7 @@ MonoBehaviour:
   upSpeed: 15
   spaceShipIsCalled: 1
   endGameGoUp: 0
+  playerWin: 0
 --- !u!96 &1848025887 stripped
 TrailRenderer:
   m_CorrespondingSourceObject: {fileID: 6775246869513965949, guid: cdf3abdc6aff505468011ff8679607fb, type: 3}
@@ -11953,6 +11954,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endGameGoToSpaceShip: 0
+  player: {fileID: 8296172669051487024}
+  sphere: {fileID: 1848025885}
 --- !u!65 &1082419764570704
 BoxCollider:
   m_ObjectHideFlags: 0

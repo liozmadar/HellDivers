@@ -13,6 +13,7 @@ public class TakeThePlayerUp : MonoBehaviour
 
     public bool spaceShipIsCalled = true;
     public bool endGameGoUp = false;
+    public bool playerWin;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class TakeThePlayerUp : MonoBehaviour
     void Update()
     {
         ShipSphereTimer();
+        AfterPlayerGoesUp();
     }
     private void OnCollisionStay(Collision collision)
     {
@@ -45,8 +47,11 @@ public class TakeThePlayerUp : MonoBehaviour
             transform.position = new Vector3(spaceShip.transform.position.x, spaceShip.transform.position.y - 1, spaceShip.transform.position.z);          
         }
     }
-    void GetIntoTheShip()
+    void AfterPlayerGoesUp()
     {
-       
+        if (playerWin)
+        {
+            transform.position = new Vector3(spaceShip.transform.position.x, spaceShip.transform.position.y - 1, spaceShip.transform.position.z);
+        }     
     }
 }

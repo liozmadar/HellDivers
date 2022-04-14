@@ -5,6 +5,8 @@ using UnityEngine;
 public class SpaceShip : MonoBehaviour
 {
     public bool endGameGoToSpaceShip;
+    public GameObject player;
+    public TakeThePlayerUp sphere;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +21,9 @@ public class SpaceShip : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player" && endGameGoToSpaceShip)
-        {
-            Debug.Log("PlayerWin");
+        {          
+            player.SetActive(false);
+            sphere.playerWin = true;
         }
     }
 }
