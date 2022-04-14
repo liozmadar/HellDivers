@@ -10553,9 +10553,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spaceShip: {fileID: 1082419764570701}
   player: {fileID: 8296172669051487024}
-  spaceShipIsCalled: 1
   trailRenderer: {fileID: 1848025887}
   upSpeed: 15
+  spaceShipIsCalled: 1
+  endGameGoUp: 0
 --- !u!96 &1848025887 stripped
 TrailRenderer:
   m_CorrespondingSourceObject: {fileID: 6775246869513965949, guid: cdf3abdc6aff505468011ff8679607fb, type: 3}
@@ -11939,6 +11940,32 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6774921637650438162, guid: cdf3abdc6aff505468011ff8679607fb, type: 3}
   m_PrefabInstance: {fileID: 6775246871021728351}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1082419764570703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082419764570701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ae09520512bcdc47a1c8bf726d8f8ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endGameGoToSpaceShip: 0
+--- !u!65 &1082419764570704
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082419764570701}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.8752544, y: 1.9456053, z: 7.103324}
+  m_Center: {x: -0.05885458, y: 0.47280264, z: -0.4686823}
 --- !u!1001 &2692241536454652576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12249,4 +12276,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spaceShip: {fileID: 1082419764570701}
   sphere: {fileID: 1848025885}
+  ship: {fileID: 1082419764570703}
   trailRendererFromTheShipSphere: {fileID: 1848025887}

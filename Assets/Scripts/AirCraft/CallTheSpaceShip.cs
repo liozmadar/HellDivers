@@ -9,6 +9,7 @@ public class CallTheSpaceShip : MonoBehaviour
     private Vector3 currentPosition;
 
     public TakeThePlayerUp sphere;
+    public SpaceShip ship;
     public TrailRenderer trailRendererFromTheShipSphere;
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,7 @@ public class CallTheSpaceShip : MonoBehaviour
 
         sphere.spaceShipIsCalled = false;
         sphere.endGameGoUp = true;
+        ship.endGameGoToSpaceShip = true;
         trailRendererFromTheShipSphere.enabled = true;
     }
 }
