@@ -7,7 +7,6 @@ using TMPro;
 public class AbsorbDropLoot : MonoBehaviour
 {
     public Animator anim;
-
     public GameObject torretSpawn;
 
     public int dropLootNumber;
@@ -15,10 +14,7 @@ public class AbsorbDropLoot : MonoBehaviour
     public PlayerHealth heal;
     public float healAmount = 20f;
 
-    public TextMeshProUGUI turretText;
     public Image TurretImage;
-
-
     public ThrowTurretFromHand callTheSciptThatThrow;
     public PlayerMovment playerMove;
     public PlayerShotJoystick playerShot;
@@ -69,20 +65,15 @@ public class AbsorbDropLoot : MonoBehaviour
     }
     public void SummonTorret()
     {
-
         if (turretFillTimer >= 1)
         {
-            turretText.text = "Torret Ready!";
             turretButton.color = Color.green;
         }
 
-
         if (turretFillTimer <= 1)
         {
-            turretText.text = "Torret Not Ready!";
             turretButton.color = Color.red;
         }
-
     }
     void TurretDelay()
     {
