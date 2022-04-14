@@ -22,9 +22,16 @@ public class CallTheSpaceShip : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-             
+        SpaceShipButtonColor();
+    }
+    void SpaceShipButtonColor()
+    {
+        if (tookTheSample)
+        {
+            spaceShipButton.image.color = Color.green;
+        }
     }
 
     public void SummonTheSpaceShip()
