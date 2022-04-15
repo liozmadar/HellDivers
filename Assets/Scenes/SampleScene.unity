@@ -6088,14 +6088,16 @@ MonoBehaviour:
   playerHealth: {fileID: 0}
   player: {fileID: 0}
   enemyPrefab: {fileID: 4802992428937100638, guid: 17f9d9f93e2ca9b4295538106f702463, type: 3}
-  bossEnemyPrefab: {fileID: 7260681370479442755, guid: bae0215e85fb786428e4a5ae9fb0fbf8, type: 3}
+  bossEnemyPrefab: {fileID: 671029153890644854, guid: bae0215e85fb786428e4a5ae9fb0fbf8, type: 3}
   enemySpawnPoints:
   - {fileID: 1583389858}
   - {fileID: 1555809069}
   - {fileID: 1202825443}
   - {fileID: 1697230818}
   spawnTimer: 5
+  reSpawnTimer: 5
   bossSpawnerTimer: 20
+  reBossSpawnerTimer: 20
 --- !u!4 &737486231
 Transform:
   m_ObjectHideFlags: 0

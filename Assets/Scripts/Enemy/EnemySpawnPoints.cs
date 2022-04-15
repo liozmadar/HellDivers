@@ -28,7 +28,7 @@ public class EnemySpawnPoints : MonoBehaviour
     {
         if (other.gameObject.tag == "Mountains")
         {
-            Debug.Log("11111111111111");
+            
         }    
     }
 }
