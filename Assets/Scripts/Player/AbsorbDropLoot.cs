@@ -17,6 +17,7 @@ public class AbsorbDropLoot : MonoBehaviour
     public Image TurretImage;
     public ThrowTurretFromHand callTheSciptThatThrow;
     public PlayerMovment playerMove;
+    public PlayerMoveJoystick playerJoystickMove;
     public PlayerShotJoystick playerShot;
 
     [Header("TurretButtonFill")]
@@ -83,6 +84,7 @@ public class AbsorbDropLoot : MonoBehaviour
     {
         playerMove.enabled = true;
         playerShot.enabled = true;
+        playerJoystickMove.enabled = true;
     }
     public void OnClickButtonTurret()
     {
@@ -94,6 +96,7 @@ public class AbsorbDropLoot : MonoBehaviour
 
             playerMove.enabled = false;
             playerShot.enabled = false;
+            playerJoystickMove.enabled = false;
 
             Invoke("PlayerMoveAndShoot", 2);
 

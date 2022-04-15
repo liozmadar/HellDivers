@@ -17808,7 +17808,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 7573006681820545072}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172669051487024}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c4546c84fd083d46a0574d3b7cc798f, type: 3}
   m_Name: 
@@ -19941,6 +19941,10 @@ PrefabInstance:
       propertyPath: turretButton
       value: 
       objectReference: {fileID: 1145317340}
+    - target: {fileID: 7573006683116843687, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
+      propertyPath: playerJoystickMove
+      value: 
+      objectReference: {fileID: 1933865626}
     - target: {fileID: 7573006683116843689, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
       propertyPath: lookJoystick
       value: 
@@ -19959,7 +19963,7 @@ PrefabInstance:
       objectReference: {fileID: 3166231813758393433}
     - target: {fileID: 7573006683116843690, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7573006683116843690, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
       propertyPath: moveSpeed

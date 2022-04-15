@@ -10,10 +10,10 @@ public class EnemySpawner : MonoBehaviour
     public GameObject bossEnemyPrefab;
     public GameObject[] enemySpawnPoints;
 
-    public float spawnTimer = 5f;
-    public float reSpawnTimer = 5f;
-    public float bossSpawnerTimer = 20f;
-    public float reBossSpawnerTimer = 20f;
+    private float spawnTimer = 5f;
+    private float reSpawnTimer = 10f;
+    private float bossSpawnerTimer = 30f;
+    private float reBossSpawnerTimer = 20f;
     private float SpawnSpeedTimer;
 
     // Start is called before the first frame update
@@ -35,12 +35,11 @@ public class EnemySpawner : MonoBehaviour
         if (bossSpawnerTimer < 0)
         {
             BossEnemySpawn();
-            bossSpawnerTimer = 20f;
+            bossSpawnerTimer = reBossSpawnerTimer;
         }
         // transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 1.5f, player.transform.position.z);
         SpawnSpeedTimer += Time.deltaTime;
         SpawnTimer();
-        Debug.Log(reSpawnTimer);
     }
     void EnemySpawn()
     {
@@ -62,15 +61,15 @@ public class EnemySpawner : MonoBehaviour
     {
         if (SpawnSpeedTimer > 30 && SpawnSpeedTimer < 60)
         {
-            reSpawnTimer = 4;
+            reSpawnTimer = 8;
         }
         else if (SpawnSpeedTimer > 60 && SpawnSpeedTimer < 90)
         {
-            reSpawnTimer = 3;
+            reSpawnTimer = 6;
         }
         else if (SpawnSpeedTimer > 90)
         {
-            reSpawnTimer = 2;
+            reSpawnTimer = 4;
         }
     }
 }
