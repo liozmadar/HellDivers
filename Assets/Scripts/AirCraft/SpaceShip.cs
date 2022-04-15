@@ -10,7 +10,7 @@ public class SpaceShip : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Invoke("ShipOutOfFrame", 10f);
     }
 
     // Update is called once per frame
@@ -25,5 +25,9 @@ public class SpaceShip : MonoBehaviour
             player.SetActive(false);
             sphere.playerWin = true;
         }
+    }
+    void ShipOutOfFrame()
+    {
+        transform.position = new Vector3(transform.position.x, transform.position.y + 100, transform.position.z);
     }
 }
