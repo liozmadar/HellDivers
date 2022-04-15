@@ -12,6 +12,7 @@ public class EnemySpawner : MonoBehaviour
 
     public float spawnTimer = 2f;
     public float bossSpawnerTimer = 10f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,7 @@ public class EnemySpawner : MonoBehaviour
             BossEnemySpawn();
             bossSpawnerTimer = 10f;
         }
+       // transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 1.5f, player.transform.position.z);
     }
     void EnemySpawn()
     {
