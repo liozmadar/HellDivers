@@ -90,6 +90,11 @@ public class EnemyHealth : MonoBehaviour
     }
     void StartSinking()
     {
-        isSinking = true; 
+        isSinking = true;
+        Invoke("DestroyMonsterAfterDeath", 2f);
+    }
+    void DestroyMonsterAfterDeath()
+    {
+        Destroy(gameObject);
     }
 }
