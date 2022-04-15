@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class MiniMapOnClick : MonoBehaviour
 {
+    public Camera MiniMapCamera;
     public Image openMiniMap;
     private bool clickOpenAndClose;
-    
+    public MiniMapCam MiniMapCam;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,12 +26,16 @@ public class MiniMapOnClick : MonoBehaviour
         if (!clickOpenAndClose)
         {
             openMiniMap.gameObject.SetActive(true);
-            clickOpenAndClose = true;
+            clickOpenAndClose = true;        
+            
+            MiniMapCam.miniMapCamDistance += 200f;
         }
         else if (clickOpenAndClose)
         {
             openMiniMap.gameObject.SetActive(false);
             clickOpenAndClose = false;
+
+            MiniMapCam.miniMapCamDistance -= 200f;
         }
     }
 }

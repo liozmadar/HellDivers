@@ -6,7 +6,7 @@ using UnityEngine;
 public class MiniMapCam : MonoBehaviour
 {
     public GameObject player;
-    public float miniMapCamDistance = 100f;
+    public float miniMapCamDistance = 200f;
     // Start is called before the first frame update
     void Start()
     {
