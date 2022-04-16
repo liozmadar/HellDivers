@@ -20043,7 +20043,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7573006683116843680, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
       propertyPath: speed
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7573006683116843680, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
       propertyPath: m_Enabled
@@ -20144,6 +20144,6 @@ MonoBehaviour:
   trailRendererFromTheShipSphere: {fileID: 1848025887}
   spaceShipButton: {fileID: 1936268081}
   tookTheSample: 0
-  SpaceShipComing: 10
+  spaceShipComingInt: 10
   spaceShipComingText: {fileID: 847935307}
   setShipComingText: 0
