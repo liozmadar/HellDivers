@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CallTheSpaceShip : MonoBehaviour
 {
@@ -15,6 +16,13 @@ public class CallTheSpaceShip : MonoBehaviour
 
     public Button spaceShipButton;
     public bool tookTheSample;
+
+    //calling the spaceShip text and timer
+    private float spaceShipComing = 0;
+    public int spaceShipComingInt = 10;
+    public TextMeshProUGUI spaceShipComingText;
+    public bool setShipComingText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +33,7 @@ public class CallTheSpaceShip : MonoBehaviour
     void Update()
     {
         SpaceShipButtonColor();
+        SpaceShipIsComingTimer();
     }
     void SpaceShipButtonColor()
     {
@@ -42,7 +51,9 @@ public class CallTheSpaceShip : MonoBehaviour
             Debug.Log(currentPosition);
         
             oneCallForTheSpaceShip = false;
-            Invoke("Check", 3);
+            Invoke("Check", 10);
+
+            setShipComingText = true;          
         }      
     }
     void Check()
@@ -53,6 +64,24 @@ public class CallTheSpaceShip : MonoBehaviour
         sphere.spaceShipIsCalled = false;
         sphere.endGameGoUp = true;
         ship.endGameGoToSpaceShip = true;
-        trailRendererFromTheShipSphere.enabled = true;
+        trailRendererFromTheShipSphere.enabled = true;     
+    }
+    void SpaceShipIsComingTimer()
+    {
+        if (setShipComingText)
+        {
+            spaceShipComing += Time.deltaTime;
+            if (spaceShipComing >= 1)
+            {
+                spaceShipComingInt--;
+                spaceShipComing = 0;
+            }
+            spaceShipComingText.text = spaceShipComingInt.ToString();
+        }
+        if (spaceShipComingInt < 0)
+        {
+            setShipComingText = false;
+            spaceShipComingText.text = "";
+        }
     }
 }
