@@ -60,12 +60,10 @@ public class EnemyHealth : MonoBehaviour
             if (startHealth == 200)
             {
                 healthBar.fillAmount -= enemyGetHit / 200f;
-                Debug.Log("Boss");
             }
             if (startHealth == 100)
             {
                 healthBar.fillAmount -= enemyGetHit / 100f;
-                Debug.Log("Normal");
             }
             
 
