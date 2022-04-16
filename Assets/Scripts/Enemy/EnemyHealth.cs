@@ -57,7 +57,17 @@ public class EnemyHealth : MonoBehaviour
             enemyGetHit = Random.Range(10, 20);
             currentHealth -= enemyGetHit;
             Destroy(other.gameObject);
-            healthBar.fillAmount -= enemyGetHit / 100f;
+            if (startHealth == 200)
+            {
+                healthBar.fillAmount -= enemyGetHit / 200f;
+                Debug.Log("Boss");
+            }
+            if (startHealth == 100)
+            {
+                healthBar.fillAmount -= enemyGetHit / 100f;
+                Debug.Log("Normal");
+            }
+            
 
             if (currentHealth > 0)
             {
