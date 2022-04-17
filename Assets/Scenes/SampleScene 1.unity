@@ -20093,6 +20093,14 @@ PrefabInstance:
       propertyPath: moveJoystick
       value: 
       objectReference: {fileID: 1857099032}
+    - target: {fileID: 7573006683300842843, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7573006683300842843, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
 --- !u!1 &8296172669051487024 stripped
