@@ -19954,7 +19954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7573006683116843680, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7573006683116843683, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
       propertyPath: backHealtBar
