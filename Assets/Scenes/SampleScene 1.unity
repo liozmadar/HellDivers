@@ -20030,6 +20030,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1659499069}
     - target: {fileID: 7573006683116843683, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
+      propertyPath: turretButton
+      value: 
+      objectReference: {fileID: 1145317339}
+    - target: {fileID: 7573006683116843683, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
       propertyPath: frontHealtBar
       value: 
       objectReference: {fileID: 1092016923}
@@ -20037,6 +20041,10 @@ PrefabInstance:
       propertyPath: deathReplayButton
       value: 
       objectReference: {fileID: 1083705116}
+    - target: {fileID: 7573006683116843683, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
+      propertyPath: callTheSpaceShipButton
+      value: 
+      objectReference: {fileID: 1936268081}
     - target: {fileID: 7573006683116843685, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
       propertyPath: m_Mass
       value: 5

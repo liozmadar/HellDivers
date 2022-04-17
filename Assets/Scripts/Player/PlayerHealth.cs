@@ -15,6 +15,8 @@ public class PlayerHealth : MonoBehaviour
     public float chipSpeed = 2f;
 
     private PlayerMovment playerMovement;
+    private PlayerMoveJoystick playerMoveJoystick;
+    private PlayerShotJoystick playerShotJoystick;
     private RayFireMouse BulletRayCastShooter;
     public Rigidbody rb;
 
@@ -22,11 +24,15 @@ public class PlayerHealth : MonoBehaviour
     public Image backHealtBar;
 
     public Button deathReplayButton;
+    public Button turretButton;
+    public Button callTheSpaceShipButton;
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
         playerMovement = GetComponent<PlayerMovment>();
+        playerMoveJoystick = GetComponent<PlayerMoveJoystick>();
+        playerShotJoystick = GetComponent<PlayerShotJoystick>();
         BulletRayCastShooter = GameObject.Find("BulletRayCastShooter").GetComponent<RayFireMouse>();      
     }
 
@@ -82,9 +88,15 @@ public class PlayerHealth : MonoBehaviour
             isDead = true;
             anim.SetTrigger("Death");
             playerMovement.enabled = false;
-            BulletRayCastShooter.enabled = false;     
-            rb.constraints = RigidbodyConstraints.FreezeAll;
+            playerMoveJoystick.enabled = false;
+            playerShotJoystick.enabled = false;
+            BulletRayCastShooter.enabled = false;
 
+            turretButton.enabled = false;
+            callTheSpaceShipButton.enabled = false;
+
+            rb.constraints = RigidbodyConstraints.FreezeAll;
+            
             deathReplayButton.gameObject.SetActive(true);
         }
     }
