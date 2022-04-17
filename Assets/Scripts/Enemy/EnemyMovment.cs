@@ -18,9 +18,11 @@ public class EnemyMovment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        nav.SetDestination(lookAtPlayer.position);
+        if (lookAtPlayer !=null)
+        {
+            nav.SetDestination(lookAtPlayer.position);
 
-        float Distance = Vector3.Distance(lookAtPlayer.transform.position, gameObject.transform.position);
-        
+            float Distance = Vector3.Distance(lookAtPlayer.transform.position, gameObject.transform.position);
+        }
     }
 }
