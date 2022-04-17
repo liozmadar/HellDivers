@@ -18479,7 +18479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 8296172669051487024}
-  miniMapCamDistance: 200
+  miniMapCamDistance: 150
 --- !u!1 &1993751856
 GameObject:
   m_ObjectHideFlags: 0
