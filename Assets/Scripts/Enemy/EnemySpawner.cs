@@ -21,6 +21,11 @@ public class EnemySpawner : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
+
+        Instantiate(enemyPrefab, enemySpawnPoints[0].transform.position, Quaternion.identity);
+        Instantiate(enemyPrefab, enemySpawnPoints[1].transform.position, Quaternion.identity);
+        Instantiate(enemyPrefab, enemySpawnPoints[2].transform.position, Quaternion.identity);
+        Instantiate(enemyPrefab, enemySpawnPoints[3].transform.position, Quaternion.identity);
     }
     // Update is called once per frame
     void Update()
