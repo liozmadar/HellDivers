@@ -92,13 +92,13 @@ public class AbsorbDropLoot : MonoBehaviour
         {
             anim.SetTrigger("TurretSummon");
 
-            Invoke("TurretDelay", 2);
+            Invoke("TurretDelay", 1.5f);
 
             playerMove.enabled = false;
             playerShot.enabled = false;
             playerJoystickMove.enabled = false;
 
-            Invoke("PlayerMoveAndShoot", 2);
+            Invoke("PlayerMoveAndShoot", 1.5f);
 
             turretFillTimer = 0f;
         }
