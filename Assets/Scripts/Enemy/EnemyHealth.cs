@@ -26,6 +26,8 @@ public class EnemyHealth : MonoBehaviour
 
     public GameObject dropLootSpawn;
 
+    public SpaceShip numberOfKills;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +37,7 @@ public class EnemyHealth : MonoBehaviour
         enemyMove = GetComponent<EnemyMovment>();
         enemyDmg = GetComponent<EnemyDmg>();
         rb = GetComponent<Rigidbody>();
+        numberOfKills = GameObject.FindObjectOfType<SpaceShip>();
     }
 
     // Update is called once per frame
@@ -74,6 +77,8 @@ public class EnemyHealth : MonoBehaviour
             
             if (currentHealth <= 0 && !monsterDeath)
             {
+                numberOfKills.numberOfKills++;
+
                 monsterDeath = true;
                 anim.SetTrigger("MonsterDead");
                 nav.enabled = false;
@@ -85,7 +90,7 @@ public class EnemyHealth : MonoBehaviour
                 Instantiate(dropLootSpawn, transform.position, Quaternion.identity);
 
                 Invoke("StartSinking", 2f);
-                Destroy(enemyCanvas);
+                Destroy(enemyCanvas);               
             }
         }
     }

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -18,6 +20,8 @@ public class PlayerHealth : MonoBehaviour
 
     public Image frontHealtBar;
     public Image backHealtBar;
+
+    public Button deathReplayButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -79,8 +83,14 @@ public class PlayerHealth : MonoBehaviour
             anim.SetTrigger("Death");
             playerMovement.enabled = false;
             BulletRayCastShooter.enabled = false;     
-            rb.constraints = RigidbodyConstraints.FreezeAll;  
+            rb.constraints = RigidbodyConstraints.FreezeAll;
+
+            deathReplayButton.gameObject.SetActive(true);
         }
+    }
+    public void DeathReplay()
+    {
+        SceneManager.LoadScene(1);
     }
     public void RestoreHealth(float healAmount)
     {
