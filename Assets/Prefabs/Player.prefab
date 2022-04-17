@@ -284,10 +284,10 @@ Transform:
   - {fileID: 3141506293960397717}
   - {fileID: 6827702024931644007}
   - {fileID: 1215999431357313077}
-  - {fileID: 7573006683300842843}
   - {fileID: 7573006682515786490}
   - {fileID: 7573006681714617029}
   - {fileID: 7573006682785341395}
+  - {fileID: 7573006683300842843}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -378,6 +378,9 @@ MonoBehaviour:
   rb: {fileID: 7573006683116843685}
   frontHealtBar: {fileID: 0}
   backHealtBar: {fileID: 0}
+  deathReplayButton: {fileID: 0}
+  turretButton: {fileID: 0}
+  callTheSpaceShipButton: {fileID: 0}
 --- !u!114 &7573006683116843687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,6 +401,7 @@ MonoBehaviour:
   TurretImage: {fileID: 0}
   callTheSciptThatThrow: {fileID: 7573006682785341396}
   playerMove: {fileID: 7573006683116843680}
+  playerJoystickMove: {fileID: 0}
   playerShot: {fileID: 7573006683116843689}
   turretButton: {fileID: 0}
   turretMaxTimer: 10
@@ -1589,7 +1593,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3198133780419866899}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7573006681988217807
 GameObject:
@@ -1683,7 +1687,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3198133780419866899}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7573006682515786491
 MonoBehaviour:
@@ -1756,8 +1760,6 @@ MonoBehaviour:
   - {fileID: 7573006682046624876}
   - {fileID: 7573006681689259640}
   - {fileID: 7573006681474112420}
-  spawnTimer: 3
-  bossSpawnerTimer: 10
 --- !u!1 &7573006682785341394
 GameObject:
   m_ObjectHideFlags: 0
@@ -1788,7 +1790,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3198133780419866899}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7573006682785341396
 MonoBehaviour:
@@ -1834,7 +1836,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3198133780419866899}
-  m_RootOrder: 8
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7573006683300842844
 MonoBehaviour:
