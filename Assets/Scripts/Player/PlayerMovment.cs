@@ -24,8 +24,8 @@ public class PlayerMovment : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        moveX = Input.GetAxisRaw("Horizontal");
-        moveY = Input.GetAxisRaw("Vertical");
+        moveX = Input.GetAxis("Horizontal");
+        moveY = Input.GetAxis("Vertical");
 
         Move();
        // Turning();
@@ -38,6 +38,9 @@ public class PlayerMovment : MonoBehaviour
         movement.Set(moveX, 0f, moveY);
         movement = movement.normalized * speed * Time.deltaTime;
         rb.MovePosition(transform.position + movement);
+        Vector3 lookAtPosition = transform.position + movement;
+        transform.LookAt(lookAtPosition);
+
     }
    /* void Turning()
     {

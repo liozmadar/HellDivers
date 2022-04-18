@@ -31,6 +31,8 @@ public class PlayerMoveJoystick : MonoBehaviour
         ver = moveJoystick.Vertical;
         Vector3 direction = new Vector3(hoz, 0, ver).normalized;
         transform.Translate(direction * moveSpeed, Space.World);
+        Vector3 lookAtPosition = transform.position + direction;
+        transform.LookAt(lookAtPosition);
     }
    
     public void Animatingg()
