@@ -12,7 +12,8 @@ public class AbsorbDropLoot : MonoBehaviour
     public int dropLootNumber;
  
     public PlayerHealth heal;
-    public float healAmount = 20f;
+    public float healAmount = 10f;
+    public float bossHealAmount = 20f;
 
     public Image TurretImage;
     public ThrowTurretFromHand callTheSciptThatThrow;
@@ -36,7 +37,7 @@ public class AbsorbDropLoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HealMySelf();
+     //   HealMySelf();
 
         SummonTorret();
         //
@@ -49,21 +50,25 @@ public class AbsorbDropLoot : MonoBehaviour
     {
         if (other.gameObject.tag == "DropLoot")
         {
-            dropLootNumber++;      
+         //   dropLootNumber++;
+
+            heal.RestoreHealth(healAmount);
         }
         else if (other.gameObject.tag == "BossDropLoot")
         {
-            dropLootNumber += 5;         
+         //   dropLootNumber += 5;
+
+            heal.RestoreHealth(bossHealAmount);
         }
     }
-    void HealMySelf()
+   /* void HealMySelf()
     {
         if (dropLootNumber >= 5)
         {
             heal.RestoreHealth(healAmount);
             dropLootNumber -= 5;
         }
-    }
+    }*/
     public void SummonTorret()
     {
         if (turretFillTimer >= 1)
