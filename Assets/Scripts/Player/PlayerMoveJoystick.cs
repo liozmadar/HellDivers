@@ -11,7 +11,8 @@ public class PlayerMoveJoystick : MonoBehaviour
 
     public float hoz;
     public float ver;
-    
+
+    public PlayerShotJoystick playerShootJoystick;
 
     // Start is called before the first frame update
     void Start()
@@ -31,10 +32,14 @@ public class PlayerMoveJoystick : MonoBehaviour
         ver = moveJoystick.Vertical;
         Vector3 direction = new Vector3(hoz, 0, ver).normalized;
         transform.Translate(direction * moveSpeed, Space.World);
-        Vector3 lookAtPosition = transform.position + direction;
-        transform.LookAt(lookAtPosition);
+
+        if (playerShootJoystick.lookJoystick.Horizontal == 0 || playerShootJoystick.lookJoystick.Vertical == 0)
+        {
+            Vector3 lookAtPosition = transform.position + direction;
+            transform.LookAt(lookAtPosition);
+
+        }     
     }
-   
     public void Animatingg()
     {
         anim.SetBool("Walking", IsMovingg());

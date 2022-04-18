@@ -14,7 +14,11 @@ public class PlayerShotJoystick : MonoBehaviour
 
     public BulletSpawnShooter bulletsShoot;
     private float shootTimer = 0.2f;
-   
+
+    public float LookHor;
+    public float LookVer;
+
+
     private void Start()
     {
        // moveJoystick = GameObject.FindGameObjectWithTag("MoveJoystick").GetComponent<FixedJoystick>();
@@ -28,13 +32,13 @@ public class PlayerShotJoystick : MonoBehaviour
        // MoveJoystick();
         LookJoystick();
     }
-    void LookJoystick()
+    public void LookJoystick()
     {
         if (lookJoystick.Horizontal !=0 && lookJoystick.Vertical !=0 || Input.GetKey(KeyCode.Y))
         {
 
-            float LookHor = lookJoystick.Horizontal;
-            float LookVer = lookJoystick.Vertical;
+            LookHor = lookJoystick.Horizontal;
+            LookVer = lookJoystick.Vertical;
             Vector3 direction = new Vector3(LookHor, 0, LookVer).normalized;
             transform.Translate(direction * lookSpeed, Space.World);
             Vector3 lookAtPosition = transform.position + direction;

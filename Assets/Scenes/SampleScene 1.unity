@@ -19956,6 +19956,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7573006683116843680, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
+      propertyPath: playerShootJoystick
+      value: 
+      objectReference: {fileID: 8296172669051487031}
     - target: {fileID: 7573006683116843683, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
       propertyPath: backHealtBar
       value: 
@@ -20028,6 +20032,10 @@ PrefabInstance:
       propertyPath: moveJoystick
       value: 
       objectReference: {fileID: 1857099032}
+    - target: {fileID: 7573006683116843690, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
+      propertyPath: playerShootJoystick
+      value: 
+      objectReference: {fileID: 8296172669051487031}
     - target: {fileID: 7573006683300842843, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -20082,3 +20090,14 @@ MonoBehaviour:
   spaceShipComingInt: 10
   spaceShipComingText: {fileID: 847935307}
   setShipComingText: 0
+--- !u!114 &8296172669051487031 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7573006683116843689, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
+  m_PrefabInstance: {fileID: 7573006681820545072}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669051487024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e903a00cf516cba41a82b9688a6a4548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

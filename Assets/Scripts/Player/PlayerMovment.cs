@@ -14,6 +14,8 @@ public class PlayerMovment : MonoBehaviour
 
     public float moveX;
     public float moveY;
+
+    public PlayerShotJoystick playerShootJoystick;
    // private float camRayLength = 100f;
     // Start is called before the first frame update
     void Start()
@@ -30,17 +32,18 @@ public class PlayerMovment : MonoBehaviour
         Move();
        // Turning();
         Animating();
-    }
-    
-
+    }   
     void Move()
     {
         movement.Set(moveX, 0f, moveY);
         movement = movement.normalized * speed * Time.deltaTime;
         rb.MovePosition(transform.position + movement);
-        Vector3 lookAtPosition = transform.position + movement;
-        transform.LookAt(lookAtPosition);
 
+        if (playerShootJoystick.lookJoystick.Horizontal == 0 || playerShootJoystick.lookJoystick.Vertical == 0)
+        {
+            Vector3 lookAtPosition = transform.position + movement;
+            transform.LookAt(lookAtPosition);
+        }     
     }
    /* void Turning()
     {
