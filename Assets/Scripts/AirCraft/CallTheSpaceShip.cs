@@ -24,6 +24,7 @@ public class CallTheSpaceShip : MonoBehaviour
     public bool setShipComingText;
 
     public TextMeshProUGUI missionText;
+    public GameObject callTheShipMarkPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -55,7 +56,9 @@ public class CallTheSpaceShip : MonoBehaviour
             oneCallForTheSpaceShip = false;
             Invoke("Check", 10);
 
-            setShipComingText = true;          
+            setShipComingText = true;
+
+            Instantiate(callTheShipMarkPrefab, transform.position, Quaternion.identity);
         }      
     }
     void Check()

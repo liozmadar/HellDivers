@@ -28,14 +28,14 @@ public class MiniMapOnClick : MonoBehaviour
             openMiniMap.gameObject.SetActive(true);
             clickOpenAndClose = true;        
             
-            MiniMapCam.miniMapCamDistance += 200f;
+            MiniMapCam.miniMapCamDistance += 150f;
         }
         else if (clickOpenAndClose)
         {
             openMiniMap.gameObject.SetActive(false);
             clickOpenAndClose = false;
 
-            MiniMapCam.miniMapCamDistance -= 200f;
+            MiniMapCam.miniMapCamDistance -= 150f;
         }
     }
 }

@@ -20366,6 +20366,8 @@ MonoBehaviour:
   spaceShipComingInt: 10
   spaceShipComingText: {fileID: 847935307}
   setShipComingText: 0
+  missionText: {fileID: 0}
+  callTheShipMarkPrefab: {fileID: 6126033331180204280, guid: 63a3e219aa0291c4e906071729181ef5, type: 3}
 --- !u!114 &8296172669051487031 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7573006683116843689, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
