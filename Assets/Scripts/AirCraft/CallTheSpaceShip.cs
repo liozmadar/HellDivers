@@ -23,10 +23,12 @@ public class CallTheSpaceShip : MonoBehaviour
     public TextMeshProUGUI spaceShipComingText;
     public bool setShipComingText;
 
+    public TextMeshProUGUI missionText;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        missionText = GameObject.Find("MissionText").GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
@@ -64,7 +66,9 @@ public class CallTheSpaceShip : MonoBehaviour
         sphere.spaceShipIsCalled = false;
         sphere.endGameGoUp = true;
         ship.endGameGoToSpaceShip = true;
-        trailRendererFromTheShipSphere.enabled = true;     
+        trailRendererFromTheShipSphere.enabled = true;
+
+        missionText.text = "get into the ship !";
     }
     void SpaceShipIsComingTimer()
     {
