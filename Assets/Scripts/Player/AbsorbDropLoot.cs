@@ -87,9 +87,9 @@ public class AbsorbDropLoot : MonoBehaviour
     }
     void PlayerMoveAndShoot()
     {
-        playerMove.enabled = true;
-        playerShot.enabled = true;
         playerJoystickMove.enabled = true;
+        playerShot.enabled = true;
+        playerMove.enabled = true;
     }
     public void OnClickButtonTurret()
     {
@@ -99,9 +99,9 @@ public class AbsorbDropLoot : MonoBehaviour
 
             Invoke("TurretDelay", 1.5f);
 
-            playerMove.enabled = false;
-            playerShot.enabled = false;
             playerJoystickMove.enabled = false;
+            playerShot.enabled = false;
+            playerMove.enabled = false;
 
             Invoke("PlayerMoveAndShoot", 1.5f);
 
