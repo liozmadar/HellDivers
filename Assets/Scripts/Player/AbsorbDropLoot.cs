@@ -10,7 +10,7 @@ public class AbsorbDropLoot : MonoBehaviour
     public GameObject torretSpawn;
 
     public int dropLootNumber;
- 
+
     public PlayerHealth heal;
     public float healAmount = 10f;
     public float bossHealAmount = 20f;
@@ -27,6 +27,9 @@ public class AbsorbDropLoot : MonoBehaviour
     public float turretCurrentTimer;
     public float turretFillTimer;
 
+    private bool movmentActive;
+    private bool movmentJoystickActive;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +40,7 @@ public class AbsorbDropLoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     //   HealMySelf();
+        //   HealMySelf();
 
         SummonTorret();
         //
@@ -50,25 +53,25 @@ public class AbsorbDropLoot : MonoBehaviour
     {
         if (other.gameObject.tag == "DropLoot")
         {
-         //   dropLootNumber++;
+            //   dropLootNumber++;
 
             heal.RestoreHealth(healAmount);
         }
         else if (other.gameObject.tag == "BossDropLoot")
         {
-         //   dropLootNumber += 5;
+            //   dropLootNumber += 5;
 
             heal.RestoreHealth(bossHealAmount);
         }
     }
-   /* void HealMySelf()
-    {
-        if (dropLootNumber >= 5)
-        {
-            heal.RestoreHealth(healAmount);
-            dropLootNumber -= 5;
-        }
-    }*/
+    /* void HealMySelf()
+     {
+         if (dropLootNumber >= 5)
+         {
+             heal.RestoreHealth(healAmount);
+             dropLootNumber -= 5;
+         }
+     }*/
     public void SummonTorret()
     {
         if (turretFillTimer >= 1)
@@ -87,9 +90,15 @@ public class AbsorbDropLoot : MonoBehaviour
     }
     void PlayerMoveAndShoot()
     {
-        playerJoystickMove.enabled = true;
         playerShot.enabled = true;
-        playerMove.enabled = true;
+        if (movmentJoystickActive)
+        {
+            playerJoystickMove.enabled = true;
+        }
+        if (movmentActive)
+        {
+            playerMove.enabled = true;
+        }
     }
     public void OnClickButtonTurret()
     {
@@ -98,10 +107,17 @@ public class AbsorbDropLoot : MonoBehaviour
             anim.SetTrigger("TurretSummon");
 
             Invoke("TurretDelay", 1.5f);
-
-            playerJoystickMove.enabled = false;
+            if (playerMove.enabled)
+            {
+                playerMove.enabled = false;
+                movmentActive = true;
+            }
+            if (playerJoystickMove.enabled)
+            {
+                playerJoystickMove.enabled = false;
+                movmentJoystickActive = true;
+            }
             playerShot.enabled = false;
-            playerMove.enabled = false;
 
             Invoke("PlayerMoveAndShoot", 1.5f);
 
