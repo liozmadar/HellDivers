@@ -5,7 +5,7 @@ using UnityEngine;
 public class OpenSetting : MonoBehaviour
 {
     public GameObject settingsImage;
-    private bool settigsOpenClose = true;
+    public bool settigsOpenClose = true;
     // Start is called before the first frame update
     void Start()
     {

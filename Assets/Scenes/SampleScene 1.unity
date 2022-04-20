@@ -3525,6 +3525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsImage: {fileID: 8307017}
+  settigsOpenClose: 1
 --- !u!1001 &420048905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13651,6 +13652,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e2acd7bb9d9eee4d922cb30574f974d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseImage: {fileID: 1374510079}
+  resumeSpriteImage: {fileID: 21300000, guid: ffc881576432a154fb549d752d7348db, type: 3}
+  pauseSpriteImage: {fileID: 21300000, guid: 8799b3dc747735b4c8b490c6d153e15b, type: 3}
+  settingsButtonDisapper: {fileID: 8307017}
+  openSettings: {fileID: 410450654}
 --- !u!114 &1374510078
 MonoBehaviour:
   m_ObjectHideFlags: 0
