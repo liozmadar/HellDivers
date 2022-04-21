@@ -3602,8 +3602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 918c547bf514306478d2433da8b7fdd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settingsImage: {fileID: 8307017}
-  settigsOpenClose: 1
+  settingsMenu: {fileID: 8307017}
 --- !u!1001 &420048905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4582,7 +4581,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   replayYesOrNotImage: {fileID: 126356353}
-  resumeGame: {fileID: 0}
 --- !u!114 &505791123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5320,6 +5318,10 @@ PrefabInstance:
       value: MoveJoystick
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_TagString
       value: MoveJoystick
       objectReference: {fileID: 0}
@@ -5797,7 +5799,7 @@ GameObject:
   - component: {fileID: 644809334}
   - component: {fileID: 644809337}
   m_Layer: 5
-  m_Name: ReplayButton
+  m_Name: ReplayMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5931,7 +5933,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   replayYesOrNotImage: {fileID: 126356353}
-  resumeGame: {fileID: 0}
 --- !u!1001 &645170947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11782,7 +11783,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   replayYesOrNotImage: {fileID: 0}
-  resumeGame: {fileID: 1374510077}
 --- !u!4 &1168100135 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4494665765492739186, guid: f7f51623fcd2a8648904a58a34f151f8, type: 3}
@@ -14071,7 +14071,7 @@ GameObject:
   - component: {fileID: 1374510078}
   - component: {fileID: 1374510077}
   m_Layer: 5
-  m_Name: PauseButton
+  m_Name: PauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14110,11 +14110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e2acd7bb9d9eee4d922cb30574f974d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseImage: {fileID: 1374510079}
-  resumeSpriteImage: {fileID: 21300000, guid: ffc881576432a154fb549d752d7348db, type: 3}
-  pauseSpriteImage: {fileID: 21300000, guid: 8799b3dc747735b4c8b490c6d153e15b, type: 3}
-  settingsButtonDisapper: {fileID: 8307017}
-  openSettings: {fileID: 410450654}
+  settingsMenuDisapper: {fileID: 8307017}
 --- !u!114 &1374510078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14191,7 +14187,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8799b3dc747735b4c8b490c6d153e15b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ffc881576432a154fb549d752d7348db, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14466,7 +14462,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1397266336}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 329.99994, y: 141.8, z: 0}
+  m_LocalPosition: {x: 329.99994, y: 187.6, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19276,7 +19272,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 7573006681820545072}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172669051487024}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c4546c84fd083d46a0574d3b7cc798f, type: 3}
   m_Name: 
@@ -21533,7 +21529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7573006683116843680, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7573006683116843680, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
       propertyPath: playerShootJoystick
@@ -21601,7 +21597,7 @@ PrefabInstance:
       objectReference: {fileID: 3166231813758393433}
     - target: {fileID: 7573006683116843690, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7573006683116843690, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
       propertyPath: moveSpeed

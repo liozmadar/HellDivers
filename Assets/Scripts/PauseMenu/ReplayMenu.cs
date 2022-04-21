@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class ReplayMenu : MonoBehaviour
 {
     public GameObject replayYesOrNotImage;
-    public PauseMenu resumeGame;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +28,6 @@ public class ReplayMenu : MonoBehaviour
     public void YesButton()
     {
         SceneManager.LoadScene(1);
-        resumeGame.ResumeGame();
+        Time.timeScale = 1;
     }
 }
