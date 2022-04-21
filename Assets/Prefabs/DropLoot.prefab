@@ -286,5 +286,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  minModifier: 30
-  maxModifier: 40
+  minModifier: 7
+  maxModifier: 8

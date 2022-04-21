@@ -1640,6 +1640,7 @@ GameObject:
   - component: {fileID: 7092029676949339167}
   - component: {fileID: 4628802144947549318}
   - component: {fileID: 9000302474586788845}
+  - component: {fileID: 6134517907567198798}
   m_Layer: 0
   m_Name: BlueEnemy 1 (1)
   m_TagString: Enemy
@@ -1743,6 +1744,7 @@ MonoBehaviour:
   monsterDeath: 0
   rb: {fileID: 44146087121670654}
   dropLootSpawn: {fileID: 6166622882824328286, guid: fd69dabaa67998c4686a06222611f0fe, type: 3}
+  numberOfKills: {fileID: 0}
 --- !u!136 &3682374613791388250
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1752,7 +1754,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 4802992428937100638}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 2
   m_Height: 3
   m_Direction: 1
@@ -1823,6 +1825,19 @@ MonoBehaviour:
   playerHealth: {fileID: 0}
   Damage: 5
   timeBetweenAttacks: 0.5
+--- !u!65 &6134517907567198798
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4802992428937100638}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 3, z: 2}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1 &4836462454976695622
 GameObject:
   m_ObjectHideFlags: 0

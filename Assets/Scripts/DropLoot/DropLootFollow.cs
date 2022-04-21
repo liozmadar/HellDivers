@@ -5,8 +5,8 @@ using UnityEngine;
 public class DropLootFollow : MonoBehaviour
 {
     public GameObject player;
-    public float minModifier = 1f;
-    public float maxModifier = 2f;  
+    private float minModifier = 7f;
+    private float maxModifier = 8f;  
 
     private bool isFollowing;
 

@@ -13,7 +13,7 @@ public class PlayerShotJoystick : MonoBehaviour
     public float lookSpeed;
 
     public BulletSpawnShooter bulletsShoot;
-    private float shootTimer = 0.2f;
+    private float shootTimer = 0.1f;
 
     public float LookHor;
     public float LookVer;
@@ -56,7 +56,7 @@ public class PlayerShotJoystick : MonoBehaviour
             if (shootTimer < 0)
             {
                 bulletsShoot.BulletShooter();
-                shootTimer = 0.2f;
+                shootTimer = 0.1f;
             }       
         }
         else

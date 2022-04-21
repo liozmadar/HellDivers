@@ -19,7 +19,7 @@ public class BulletSpawnShooter : MonoBehaviour
     }
     public void BulletShooter()
     {
-        float randomShoot = Random.Range(-1, 1);
+        float randomShoot = Random.Range(-3, 3);
         
         Transform newBullet = Instantiate(bullet, transform.position, transform.rotation);
         newBullet.Rotate(Vector3.up * randomShoot, Space.Self);
