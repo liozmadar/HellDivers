@@ -25,7 +25,7 @@ public class SampleDestroyOnTouch : MonoBehaviour
         {
             Destroy(gameObject);
             callTheSpaceShip.tookTheSample = true;
-            missionText.text = "call the space ship !";
+            missionText.text = "Call the space ship !";
         }
     }
 }

@@ -71,7 +71,7 @@ public class CallTheSpaceShip : MonoBehaviour
         ship.endGameGoToSpaceShip = true;
         trailRendererFromTheShipSphere.enabled = true;
 
-        missionText.text = "get into the ship !";
+        missionText.text = "Get into the ship !";
     }
     void SpaceShipIsComingTimer()
     {
