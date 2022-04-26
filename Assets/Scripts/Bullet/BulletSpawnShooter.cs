@@ -13,6 +13,7 @@ public class BulletSpawnShooter : MonoBehaviour
 
     public Button reloadButton;
     public TextMeshProUGUI reloadText;
+    public TextMeshProUGUI reloadTextAbove;
     
 
     // Start is called before the first frame update
@@ -25,6 +26,10 @@ public class BulletSpawnShooter : MonoBehaviour
     void Update()
     {
         reloadText.text = currentBulletCount.ToString() + "/30";
+        if (currentBulletCount < 10)
+        {
+            reloadTextAbove.text = "Reload !";
+        }
     }
     public void BulletShooter()
     {
@@ -43,6 +48,7 @@ public class BulletSpawnShooter : MonoBehaviour
         if (currentBulletCount < 30)
         {
             currentBulletCount = 30;
+            reloadTextAbove.text = "";
         }
     }
 }
