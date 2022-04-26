@@ -35,10 +35,7 @@ public class BulletSpawnShooter : MonoBehaviour
             Transform newBullet = Instantiate(bullet, transform.position, transform.rotation);
             newBullet.Rotate(Vector3.up * randomShoot, Space.Self);
 
-
-            reloadButton.image.fillAmount = currentBulletCount;
             currentBulletCount--;
-
         }    
     }
     public void ReloadButtonClick()
