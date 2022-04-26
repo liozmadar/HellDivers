@@ -8,37 +8,44 @@ public class BulletSpawnShooter : MonoBehaviour
 {
     public Transform bullet;
     private int bulletCount = 30;
+    private int currentBulletCount;
+    
 
     public Button reloadButton;
     public TextMeshProUGUI reloadText;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        reloadText = GameObject.Find("ReloadText").GetComponent<TextMeshProUGUI>();
+        currentBulletCount = bulletCount;
     }
 
     // Update is called once per frame
     void Update()
     {
-        reloadText.text = bulletCount.ToString();
+        reloadText.text = currentBulletCount.ToString() + "/30";
     }
     public void BulletShooter()
     {
-        if (bulletCount > 0)
+        if (currentBulletCount > 0)
         {
             float randomShoot = Random.Range(-3, 3);
 
             Transform newBullet = Instantiate(bullet, transform.position, transform.rotation);
             newBullet.Rotate(Vector3.up * randomShoot, Space.Self);
-            bulletCount--;
+
+
+            reloadButton.image.fillAmount = currentBulletCount;
+            currentBulletCount--;
+
         }    
     }
     public void ReloadButtonClick()
     {
-        if (bulletCount < 30)
+        if (currentBulletCount < 30)
         {
-            bulletCount = 30;
+            currentBulletCount = 30;
         }
     }
 }
