@@ -66,11 +66,11 @@ public class EnemySpawner : MonoBehaviour
     {
         if (SpawnSpeedTimer > 30 && SpawnSpeedTimer < 60)
         {
-            reSpawnTimer = 7;
+            reSpawnTimer = 5;   
         }
         else if (SpawnSpeedTimer > 60 && SpawnSpeedTimer < 90)
         {
-            reSpawnTimer = 5;
+            reSpawnTimer = 4;
         }
         else if (SpawnSpeedTimer > 90)
         {
