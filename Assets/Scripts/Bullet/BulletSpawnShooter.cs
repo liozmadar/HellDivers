@@ -14,6 +14,10 @@ public class BulletSpawnShooter : MonoBehaviour
     public Button reloadButton;
     public TextMeshProUGUI reloadText;
     public TextMeshProUGUI reloadTextAbove;
+
+    public Animator anim;
+    public PlayerMoveJoystick playerMoveJoystick;
+    public PlayerMovment playerMove;
     
 
     // Start is called before the first frame update
@@ -47,8 +51,19 @@ public class BulletSpawnShooter : MonoBehaviour
     {
         if (currentBulletCount < 30)
         {
-            currentBulletCount = 30;
-            reloadTextAbove.text = "";
+            anim.SetTrigger("Reload");
+            playerMoveJoystick.enabled = false;
+            playerMove.enabled = false;
+
+            Invoke("ReloadCoolDown", 3);
         }
+    }
+    void ReloadCoolDown()
+    {
+        currentBulletCount = 30;
+        reloadTextAbove.text = "";
+
+        playerMoveJoystick.enabled = true;
+        playerMove.enabled = true;
     }
 }

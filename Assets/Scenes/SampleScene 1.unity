@@ -22188,6 +22188,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7573006683300842844, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 3166231813758393433}
+    - target: {fileID: 7573006683300842844, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 8296172669051487024}
+    - target: {fileID: 7573006683300842844, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
+      propertyPath: playerMove
+      value: 
+      objectReference: {fileID: 8296172669051487032}
+    - target: {fileID: 7573006683300842844, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
       propertyPath: reloadText
       value: 
       objectReference: {fileID: 732637037}
@@ -22199,6 +22211,10 @@ PrefabInstance:
       propertyPath: reloadTextAbove
       value: 
       objectReference: {fileID: 2131024648}
+    - target: {fileID: 7573006683300842844, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
+      propertyPath: playerMoveJoystick
+      value: 
+      objectReference: {fileID: 1933865626}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
 --- !u!1 &8296172669051487024 stripped
@@ -22252,5 +22268,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e903a00cf516cba41a82b9688a6a4548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8296172669051487032 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7573006683116843680, guid: 490a08381a0cf9e45a87afbeffc40d73, type: 3}
+  m_PrefabInstance: {fileID: 7573006681820545072}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669051487024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eabf0fd5b8e13ee40a8eb87a1ce19d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
