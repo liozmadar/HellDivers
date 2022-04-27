@@ -57,7 +57,7 @@ public class BulletSpawnShooter : MonoBehaviour
           //  playerMove.enabled = false;
 
             isReloadingNow = false;
-            Invoke("ReloadCoolDown", 2);
+            Invoke("ReloadCoolDown", 2.2f);
         }
     }
     void ReloadCoolDown()
