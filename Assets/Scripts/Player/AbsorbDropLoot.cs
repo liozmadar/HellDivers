@@ -44,7 +44,7 @@ public class AbsorbDropLoot : MonoBehaviour
 
         SummonTorret();
         //
-        turretFillTimer += Time.deltaTime / 10;
+        turretFillTimer += Time.deltaTime / 20;
         turretCurrentTimer = Mathf.Clamp(turretCurrentTimer, 0, turretMaxTimer);
         turretButton.fillAmount = turretFillTimer;
         turretButton.color = Color.Lerp(Color.red, Color.green, turretFillTimer);
