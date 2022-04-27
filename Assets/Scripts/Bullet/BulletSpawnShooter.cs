@@ -36,7 +36,7 @@ public class BulletSpawnShooter : MonoBehaviour
         if (currentBulletCount < 10 && reloadingText)
         {
             reloadTextAbove.text = "Reload!";           
-        }
+        }       
     }
     public void BulletShooter()
     {
@@ -48,6 +48,10 @@ public class BulletSpawnShooter : MonoBehaviour
             newBullet.Rotate(Vector3.up * randomShoot, Space.Self);
 
             currentBulletCount--;
+            if (currentBulletCount == 0)
+            {
+                ReloadButtonClick();
+            }
         }    
     }
     public void ReloadButtonClick()
