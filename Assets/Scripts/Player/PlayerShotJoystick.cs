@@ -56,7 +56,7 @@ public class PlayerShotJoystick : MonoBehaviour
             if (shootTimer < 0)
             {
                 bulletsShoot.BulletShooter();
-                shootTimer = 0.1f;
+                shootTimer = 0.15f;
             }       
         }
         else

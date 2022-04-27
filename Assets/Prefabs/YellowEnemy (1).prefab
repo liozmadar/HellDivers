@@ -387,13 +387,13 @@ MonoBehaviour:
   backhealthbar: {fileID: 3404063989266958977}
   healthBar: {fileID: 1232310996466501502}
   anim: {fileID: 3006710881178358096}
-  enemyGetHit: 0
-  startHealth: 200
+  startHealth: 300
   currentHealth: 0
   isSinking: 0
   monsterDeath: 0
   rb: {fileID: 5224971245588207439}
   dropLootSpawn: {fileID: 3318836824994955628, guid: c24da596f7d3fbf429596697dfd24373, type: 3}
+  numberOfKills: {fileID: 0}
 --- !u!114 &2328431995887254724
 MonoBehaviour:
   m_ObjectHideFlags: 0

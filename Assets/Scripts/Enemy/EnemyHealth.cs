@@ -12,7 +12,7 @@ public class EnemyHealth : MonoBehaviour
     public Image healthBar;
     public Animator anim;
     //
-    public int enemyGetHit;
+    private int enemyGetHit;
     private float sinkSpeed = 1f;
     public int startHealth = 100;
     public int currentHealth;
@@ -57,12 +57,12 @@ public class EnemyHealth : MonoBehaviour
                 enemyCanvas.SetActive(true);
             }
                
-            enemyGetHit = Random.Range(10, 20);
+            enemyGetHit = Random.Range(20, 30);
             currentHealth -= enemyGetHit;
             Destroy(other.gameObject);
-            if (startHealth == 200)
+            if (startHealth == 300)
             {
-                healthBar.fillAmount -= enemyGetHit / 200f;
+                healthBar.fillAmount -= enemyGetHit / 300f;
             }
             if (startHealth == 100)
             {
