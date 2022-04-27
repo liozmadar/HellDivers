@@ -53,11 +53,11 @@ public class BulletSpawnShooter : MonoBehaviour
         if (currentBulletCount < 30)
         {
             anim.SetTrigger("Reload");
-            playerMoveJoystick.enabled = false;
-            playerMove.enabled = false;
+          //  playerMoveJoystick.enabled = false;
+          //  playerMove.enabled = false;
 
             isReloadingNow = false;
-            Invoke("ReloadCoolDown", 1.5f);
+            Invoke("ReloadCoolDown", 2);
         }
     }
     void ReloadCoolDown()
@@ -65,8 +65,8 @@ public class BulletSpawnShooter : MonoBehaviour
         currentBulletCount = 30;
         reloadTextAbove.text = "";
 
-        playerMoveJoystick.enabled = true;
-        playerMove.enabled = true;
+      //  playerMoveJoystick.enabled = true;
+      //  playerMove.enabled = true;
 
         isReloadingNow = true;
     }
