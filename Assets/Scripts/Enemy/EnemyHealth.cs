@@ -58,6 +58,10 @@ public class EnemyHealth : MonoBehaviour
             }
                
             enemyGetHit = Random.Range(20, 30);
+            if (other.gameObject.tag == "BulletMissile")
+            {
+                enemyGetHit = Random.Range(50, 100);
+            }
             currentHealth -= enemyGetHit;
             Destroy(other.gameObject);
             if (startHealth == 300)
