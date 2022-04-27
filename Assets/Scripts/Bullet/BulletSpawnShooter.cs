@@ -18,6 +18,7 @@ public class BulletSpawnShooter : MonoBehaviour
     public Animator anim;
     public PlayerMoveJoystick playerMoveJoystick;
     public PlayerMovment playerMove;
+    private bool isReloadingNow = true;
     
 
     // Start is called before the first frame update
@@ -37,7 +38,7 @@ public class BulletSpawnShooter : MonoBehaviour
     }
     public void BulletShooter()
     {
-        if (currentBulletCount > 0)
+        if (currentBulletCount > 0 && isReloadingNow)
         {
             float randomShoot = Random.Range(-3, 3);
 
@@ -55,7 +56,8 @@ public class BulletSpawnShooter : MonoBehaviour
             playerMoveJoystick.enabled = false;
             playerMove.enabled = false;
 
-            Invoke("ReloadCoolDown", 3);
+            isReloadingNow = false;
+            Invoke("ReloadCoolDown", 1.5f);
         }
     }
     void ReloadCoolDown()
@@ -65,5 +67,7 @@ public class BulletSpawnShooter : MonoBehaviour
 
         playerMoveJoystick.enabled = true;
         playerMove.enabled = true;
+
+        isReloadingNow = true;
     }
 }
