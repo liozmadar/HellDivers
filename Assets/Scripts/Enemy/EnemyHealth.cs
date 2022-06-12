@@ -85,6 +85,7 @@ public class EnemyHealth : MonoBehaviour
 
                 monsterDeath = true;
                 anim.SetTrigger("MonsterDead");
+                anim.SetTrigger("Die");
                 nav.enabled = false;
                 enemyMove.enabled = false;
                 enemyDmg.enabled = false;

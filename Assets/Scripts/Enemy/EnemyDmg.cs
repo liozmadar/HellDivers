@@ -37,6 +37,7 @@ public class EnemyDmg : MonoBehaviour
         {
             playerHealth.TakeDamage(Damage);
             anim.SetTrigger("Attack");
+            anim.SetTrigger("Stab Attack");
         }
     }
     private void OnTriggerEnter(Collider other)
