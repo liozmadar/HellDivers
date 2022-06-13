@@ -35,10 +35,14 @@ public class EnemyDmg : MonoBehaviour
         timer = 0f;
         if (playerHealth.health > 0)
         {
-            playerHealth.TakeDamage(Damage);
           //  anim.SetTrigger("Attack");
             anim.SetTrigger("Stab Attack");
         }
+    }
+    //this call the actual hit attack from the attack animation
+    public void AttackAnimEvent()
+    {
+            playerHealth.TakeDamage(Damage);
     }
     private void OnTriggerEnter(Collider other)
     {
