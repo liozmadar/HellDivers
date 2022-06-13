@@ -15,6 +15,7 @@ public class EnemyHealth : MonoBehaviour
     private int enemyGetHit;
     private float sinkSpeed = 1f;
     public int startHealth = 100;
+    private float startHealthFillAmout;
     public int currentHealth;
     public bool isSinking;
     public bool monsterDeath = false;
@@ -31,6 +32,8 @@ public class EnemyHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        startHealthFillAmout = startHealth;
+
         anim = GetComponent<Animator>();
         currentHealth = startHealth;
         nav = GetComponent<NavMeshAgent>();
@@ -68,9 +71,9 @@ public class EnemyHealth : MonoBehaviour
             {
                 healthBar.fillAmount -= enemyGetHit / 300f;
             }
-            if (startHealth == 100)
+            if (startHealth == startHealthFillAmout)
             {
-                healthBar.fillAmount -= enemyGetHit / 100f;
+                healthBar.fillAmount -= enemyGetHit / startHealthFillAmout;
             }
             
 
