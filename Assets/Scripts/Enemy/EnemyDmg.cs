@@ -36,7 +36,7 @@ public class EnemyDmg : MonoBehaviour
         if (playerHealth.health > 0)
         {
             playerHealth.TakeDamage(Damage);
-            anim.SetTrigger("Attack");
+          //  anim.SetTrigger("Attack");
             anim.SetTrigger("Stab Attack");
         }
     }
